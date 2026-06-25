@@ -1,4 +1,28 @@
-// Données statiques : liens et contenu "Qui sommes nous"
+// Données statiques : numéros PDF, liens et contenu "Qui sommes nous"
+
+export const LISTE_NUMEROS = [
+  {
+    numero: 1,
+    titre: 'Premier bulletin — Fondation du CJR',
+    date: '2025-01-15',
+    fichier: '/pdfs/soub-n1.pdf',
+    description: 'Éditorial de fondation, nos statuts, premier appel à la construction.'
+  },
+  {
+    numero: 2,
+    titre: 'Crise du capitalisme et intervention de masse',
+    date: '2025-04-01',
+    fichier: '/pdfs/soub-n2.pdf',
+    description: 'Analyse de la crise économique, perspectives d\'intervention dans les luttes sociales.'
+  },
+  {
+    numero: 3,
+    titre: 'Écologie, question nationale et internationalisme',
+    date: '2025-09-01',
+    fichier: '/pdfs/soub-n3.pdf',
+    description: 'Contributions sur la crise écologique, la question nationale et la construction de l\'Internationale.'
+  }
+];
 
 export const LISTE_LIENS = [
   {

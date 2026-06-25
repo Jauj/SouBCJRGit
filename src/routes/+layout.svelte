@@ -1,6 +1,7 @@
 <script>
   import '../app.css';
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
 
   let { children } = $props();
   let menuOpen = $state(false);
@@ -19,8 +20,10 @@
   ];
 
   function isActive(href) {
-    if (href === '/') return currentPath === '/';
-    return currentPath.startsWith(href);
+    const b = base.replace(/\/$/, '');
+    const path = currentPath.startsWith(b) ? currentPath.slice(b.length) || '/' : currentPath;
+    if (href === '/') return path === '/';
+    return path.startsWith(href);
   }
 
   function closeMenu() { menuOpen = false; }
@@ -56,7 +59,7 @@
       {/each}
     </nav>
 
-    <img src="/logo-cjr.jpg" alt="Logo CJR" class="logo-cjr" />
+    <img src="{base}/logo-cjr.jpg" alt="Logo CJR" class="logo-cjr" />
 
     <div class="social-links">
       <a href="https://www.instagram.com/cjr.soub/" target="_blank" rel="noopener noreferrer" title="Instagram">
@@ -69,10 +72,12 @@
 
     <div class="newsletter-form">
       <label for="newsletter-email">Newsletter</label>
-      <form onsubmit={(e) => { e.preventDefault(); alert('Merci ! La newsletter sera bientôt disponible.'); return false; }}>
-        <input id="newsletter-email" type="email" placeholder="Votre email" required />
+      <form action="https://buttondown.email/api/emails/embed-subscribe/cjr-soub" method="post">
+        <input type="hidden" name="next" value="https://cjr-soub.fr/" />
+        <input id="newsletter-email" type="email" name="email" placeholder="Votre email" required />
         <button type="submit">S'inscrire</button>
       </form>
+      <p class="newsletter-note">Via Buttondown — pas de spam, désinscription en un clic.</p>
     </div>
   </aside>
 
@@ -91,7 +96,7 @@
   <!-- Menu Mobile Overlay -->
   {#if menuOpen}
     <div class="mobile-menu open">
-      <img src="/logo-cjr.jpg" alt="Logo CJR" class="logo-cjr" />
+      <img src="{base}/logo-cjr.jpg" alt="Logo CJR" class="logo-cjr" />
       <blockquote class="citation">
         "La société bourgeoise se trouve à la croisée des chemins : soit en transition vers le socialisme, soit en régression vers la barbarie."
         <span class="auteur">— Rosa Luxemburg citant F. Engels</span>
@@ -114,6 +119,14 @@
         <a href="mailto:cjr.soub@gmail.com" title="Email">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
+      </div>
+      <div class="newsletter-form">
+        <label for="newsletter-email-m">Newsletter</label>
+        <form action="https://buttondown.email/api/emails/embed-subscribe/cjr-soub" method="post">
+          <input type="hidden" name="next" value="https://cjr-soub.fr/" />
+          <input id="newsletter-email-m" type="email" name="email" placeholder="Votre email" required />
+          <button type="submit">S'inscrire</button>
+        </form>
       </div>
     </div>
   {/if}

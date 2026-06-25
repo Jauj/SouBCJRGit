@@ -2,8 +2,16 @@ backend:
   name: github
   repo: Jauj/SouBCJRGit
   branch: main
-  base_url: https://api.netlify.com/auth
-  auth_endpoint: oauth
+  # === CONFIGURATION OAUTH POUR GITHUB PAGES ===
+  # 1. Créer une OAuth App : https://github.com/settings/developers → "New OAuth App"
+  # 2. Homepage URL       : https://cjr-soub.fr
+  # 3. Callback URL       : https://api.netlify.com/auth/done
+  # 4. Copier le Client ID et le remplacer ci-dessous (décommenter la ligne app_id)
+  #
+  # L'auth proxy de Netlify est gratuit et fonctionne même sans compte Netlify.
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  # app_id: VOTRE_CLIENT_ID_GITHUB
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -20,4 +28,5 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Catégorie", name: "category", widget: "select", options: ["Analyse", "Thèse", "Contribution", "Compte-rendu"] }
       - { label: "Auteur", name: "author", widget: "string", default: "CJR" }
+      - { label: "Tags / Indexation", name: "tags", widget: "text", hint: "Format : Catégorie: Terme1, Terme2; AutreCatégorie: Terme3" }
       - { label: "Corps de l'article", name: "body", widget: "markdown" }

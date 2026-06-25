@@ -7,7 +7,7 @@
 <svelte:head>
   <title>Index Thématique | Socialisme ou Barbarie</title>
   <meta name="description" content="Naviguez par concepts : Front Unique, Capitalisme, Écologie, Impérialisme. Le lexique de la révolution." />
-  <link rel="canonical" href="https://cjr-soub.fr/index" />
+  <link rel="canonical" href="https://cjr-soub.fr/index-thematique" />
 </svelte:head>
 
 <div class="section-header" style="margin-bottom: 3rem;">

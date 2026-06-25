@@ -5,12 +5,21 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   kit: {
+    // Obligatoire pour GitHub Pages : les assets (logo, CSS, JS)
+    // doivent être servis sous /SouBCJRGit/
+    // Quand cjr-soub.fr sera configuré, changer en: base: '/'
+    paths: {
+      base: '/SouBCJRGit'
+    },
     adapter: adapter({
       pages: 'build',
       assets: 'build',
       fallback: '404.html',
       strict: true
-    })
+    }),
+    prerender: {
+      handleHttpError: 'warn'
+    }
   }
 };
 
