@@ -4,6 +4,7 @@ date: 2026-05-15
 description: Réflexion sur la dialectique entre la lutte nationale et la perspective internationaliste dans le contexte impérialiste contemporain.
 category: Analyse
 author: CJR
+tags: "Analyse: Impérialisme, Question nationale; Courants: Marxisme, Léninisme; Stratégie: Internationalisme"
 ---
 
 ## Le retour de la question nationale
@@ -25,7 +26,3 @@ Cette célèbre formule de Marx et Engels ne signifie pas que les travailleurs s
 Le droit des peuples à l'autodétermination est un principe fondamental du marxisme-léninisme. Cela signifie le droit de chaque nation à choisir librement son destin politique, y compris le droit à la sécession. Ce droit n'est pas un dogme absolu, mais un outil d'analyse qui doit être évalué dans le contexte de chaque situation concrète.
 
 Dans le contexte actuel, le droit à l'autodétermination est particulièrement pertinent pour les peuples opprimés par l'impérialisme : le peuple palestinien, les peuples d'Afrique soumis au néocolonialisme, les nations opprimées à l'intérieur des États impérialistes. Soutenir ces luttes n'est pas un acte de compassion mais une nécessité stratégique pour affaiblir l'impérialisme et renforcer le camp des opprimés.
-
-## Le CJR et la question nationale
-
-Le CJR s'engage à analyser chaque conflit national avec la rigueur et l'honnêteté intellectuelle que la situation exige. Nous refusons les positions simplistes — le soutien inconditionnel à tout mouvement qui se dit anti-impérialiste comme le rejet pur et simple de tout mouvement national. Notre boussole est et reste la lutte des classes et les intérêts du prolétariat international.

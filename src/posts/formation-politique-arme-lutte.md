@@ -4,6 +4,7 @@ date: 2026-05-01
 description: Pourquoi la formation politique systématique est un enjeu stratégique pour le mouvement révolutionnaire contemporain.
 category: Contribution
 author: CJR
+tags: "Organisation: Formation politique, Travail politique; Courants: Marxisme, Trotskysme; Stratégie: Construction du parti"
 ---
 
 ## Le déficit de formation
@@ -32,5 +33,3 @@ Le CJR a fait de la formation politique un pilier de son activité. Notre progra
 2. **Séminaires thématiques** approfondis sur des questions d'actualité stratégique.
 3. **Bulletins et contributions** (comme celui-ci) qui servent de support au débat interne et à l'élaboration collective.
 4. **Écoles de cadres** destinées à former les responsables politiques de demain.
-
-La formation politique n'est pas un luxe pour les périodes de calme, mais une arme de lutte à part entière. Dans une période où l'adversaire dispose de moyens idéologiques colossaux — médias de masse, universités bourgeoises, appareils culturels — la formation politique de nos cadres est une question de survie pour le mouvement révolutionnaire.

@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Jauj/soub-CJR-loop
+  repo: Jauj/SouBCJRGit
   branch: main
   base_url: https://api.netlify.com/auth
   auth_endpoint: oauth

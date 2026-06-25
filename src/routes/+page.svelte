@@ -1,35 +1,44 @@
 <script>
   import { marked } from 'marked';
-  import { loadPosts, formatDate } from '$lib/posts.js';
+  import { loadPosts, formatDateShort } from '$lib/posts.js';
 
   const posts = loadPosts();
-  const latestPosts = posts.slice(0, 6);
+  const articlesAccueil = posts.slice(0, 10);
 </script>
 
 <svelte:head>
-  <title>Socialisme ou Barbarie — Bulletin du CJR</title>
+  <title>Socialisme ou Barbarie | Cercle de Jeunes Révolutionnaires</title>
   <meta name="description" content="Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme." />
+  <link rel="canonical" href="https://cjr-soub.fr/" />
 </svelte:head>
 
-<section class="hero">
-  <h1>Socialisme ou <span class="accent">Barbarie</span></h1>
-  <p class="tagline">Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme.</p>
-  <div class="separator"></div>
-</section>
+<div style="margin-bottom: 6rem;">
+  <div class="section-header">
+    <div class="section-label">Dernières publications</div>
+    <div class="section-bar"></div>
+  </div>
 
-<section class="posts-section">
-  <h2 class="section-title">Derniers articles</h2>
-
-  {#each latestPosts as post}
-    <article class="post-card">
-      <h2>
-        <a href="/article/{post.slug}">{post.title}</a>
-      </h2>
-      <div class="post-meta">
-        <span class="category-tag">{post.category}</span>
-        <span>{formatDate(post.date)}</span>
+  {#each articlesAccueil as post}
+    <article class="article-card">
+      <div class="card-meta">
+        <time class="card-date" datetime={post.date}>{post.dateAffichee}</time>
+        <div class="card-line"></div>
       </div>
-      <p class="description">{post.description}</p>
+      <h3 class="card-title">
+        <a href="/article/{post.slug}">{post.title}</a>
+      </h3>
+      {#if post.indexations && post.indexations.length > 0}
+        <div class="card-tags">
+          {#each post.indexations as idx}
+            <a href="/publications?tag={encodeURIComponent(idx.terme)}" class="tag">{idx.terme}</a>
+          {/each}
+        </div>
+      {/if}
+      <p class="card-excerpt">{post.description}</p>
     </article>
   {/each}
-</section>
+
+  {#if articlesAccueil.length === 0}
+    <p style="font-size: 0.875rem; font-style: italic; opacity: 0.5;">Aucun article disponible pour le moment.</p>
+  {/if}
+</div>

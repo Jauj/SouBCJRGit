@@ -4,6 +4,7 @@ date: 2026-05-28
 description: Contribution sur l'articulation entre la question écologique et la perspective socialiste, contre les fausses solutions capitalistes.
 category: Contribution
 author: CJR
+tags: "Analyse: Écologie, Crise écologique; Stratégie: Planification démocratique; Courants: Marxisme"
 ---
 
 ## La catastrophe écologique est une catastrophe capitaliste
@@ -15,8 +16,6 @@ Les tentatives de « verdir » le capitalisme — transition énergétique pilot
 ## Les faux débats
 
 Le débat public sur l'écologie est structuré par des oppositions fallacieuses qui empêchent de penser le problème à sa racine. On nous oppose la croissance à la décroissance, l'écologie à l'emploi, le local au global. Ces dichotomies sont des leurres. Le vrai problème n'est pas la croissance en soi, mais la forme que prend la croissance sous le capitalisme : croissance des profits, destruction des conditions de vie.
-
-Les mouvements « décroissants » qui se contentent de prôner la frugalité individuelle font l'impasse sur la question du pouvoir. Si les décisions économiques restent entre les mains des capitalistes et de leurs États, aucune réduction de la consommation ne sera qu'une récession imposée aux classes populaires, tandis que les riches continueront de consommer sans limite.
 
 ## Une écologie de classe
 
@@ -32,5 +31,3 @@ Le CJR propose une approche écologique qui est indissociable de la perspective 
 - **Expropriation** des grands groupes énergétiques et industriels responsables de la destruction.
 - **Réappropriation collective** des moyens de production pour les réorienter vers des activités socialement utiles et écologiquement viables.
 - **Solidarité internationale** avec les peuples du Sud qui subissent de plein fouet les conséquences du changement climatique causé par le capitalisme des pays impérialistes.
-
-L'écologie sans le socialisme est un gadget bourgeois. Le socialisme sans l'écologie est une abstraction creuse. Les deux sont indissociables.
