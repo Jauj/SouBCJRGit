@@ -6,6 +6,10 @@ export const LISTE_NUMEROS = [
     titre: 'Premier bulletin — Fondation du CJR',
     date: '2025-01-15',
     fichier: '/pdfs/soub-n1.pdf',
+    // Lien Google Drive (à remplacer par vos vrais liens)
+    lienGoogleDrive: 'https://drive.google.com/file/d/VOTRE_ID_1/view?usp=drive_link',
+    // URL de l'image de couverture (première page du PDF)
+    couverture: '/images/couverture-n1.jpg',
     description: 'Éditorial de fondation, nos statuts, premier appel à la construction.'
   },
   {
@@ -13,6 +17,8 @@ export const LISTE_NUMEROS = [
     titre: 'Crise du capitalisme et intervention de masse',
     date: '2025-04-01',
     fichier: '/pdfs/soub-n2.pdf',
+    lienGoogleDrive: 'https://drive.google.com/file/d/VOTRE_ID_2/view?usp=drive_link',
+    couverture: '/images/couverture-n2.jpg',
     description: 'Analyse de la crise économique, perspectives d\'intervention dans les luttes sociales.'
   },
   {
@@ -20,6 +26,8 @@ export const LISTE_NUMEROS = [
     titre: 'Écologie, question nationale et internationalisme',
     date: '2025-09-01',
     fichier: '/pdfs/soub-n3.pdf',
+    lienGoogleDrive: 'https://drive.google.com/file/d/VOTRE_ID_3/view?usp=drive_link',
+    couverture: '/images/couverture-n3.jpg',
     description: 'Contributions sur la crise écologique, la question nationale et la construction de l\'Internationale.'
   }
 ];

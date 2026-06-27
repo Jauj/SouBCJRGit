@@ -68,16 +68,18 @@
       <a href="mailto:cjr.soub@gmail.com" title="Email">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       </a>
+      <a href="{base}/admin/" title="CMS - Gérer le site">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V6"/><path d="M8 12l4 4 4-4"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      </a>
     </div>
 
     <div class="newsletter-form">
       <label for="newsletter-email">Newsletter</label>
-      <form action="https://buttondown.email/api/emails/embed-subscribe/cjr-soub" method="post">
-        <input type="hidden" name="next" value="https://cjr-soub.fr/" />
+      <form onsubmit={(e) => { e.preventDefault(); const email = document.getElementById('newsletter-email').value; if(email) { alert('Merci ! Votre email : ' + email + '\n\nCopiez cette adresse dans votre liste de diffusion privée.'); document.getElementById('newsletter-email').value = ''; } }}>
         <input id="newsletter-email" type="email" name="email" placeholder="Votre email" required />
         <button type="submit">S'inscrire</button>
       </form>
-      <p class="newsletter-note">Via Buttondown — pas de spam, désinscription en un clic.</p>
+      <p class="newsletter-note" style="font-size: 0.75rem; opacity: 0.7;">Liste privée - pas de spam</p>
     </div>
   </aside>
 
@@ -119,11 +121,13 @@
         <a href="mailto:cjr.soub@gmail.com" title="Email">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
+        <a href="{base}/admin/" title="CMS - Gérer le site">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V6"/><path d="M8 12l4 4 4-4"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </a>
       </div>
       <div class="newsletter-form">
         <label for="newsletter-email-m">Newsletter</label>
-        <form action="https://buttondown.email/api/emails/embed-subscribe/cjr-soub" method="post">
-          <input type="hidden" name="next" value="https://cjr-soub.fr/" />
+        <form onsubmit={(e) => { e.preventDefault(); const email = document.getElementById('newsletter-email-m').value; if(email) { alert('Merci ! Votre email : ' + email + '\n\nCopiez cette adresse dans votre liste de diffusion privée.'); document.getElementById('newsletter-email-m').value = ''; } }}>
           <input id="newsletter-email-m" type="email" name="email" placeholder="Votre email" required />
           <button type="submit">S'inscrire</button>
         </form>
