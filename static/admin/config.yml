@@ -11,7 +11,7 @@ backend:
   # L'auth proxy de Netlify est gratuit et fonctionne même sans compte Netlify.
   base_url: https://api.netlify.com
   auth_endpoint: auth
-  # app_id: Ov23litTJZy6odUwh5kf
+  app_id: Ov23litTJZy6odUwh5kf
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
