@@ -12,11 +12,11 @@
   });
 
   const navItems = [
-    { label: 'Accueil', href: '/' },
-    { label: 'Publications', href: '/publications' },
-    { label: 'Index', href: '/index-thematique' },
-    { label: 'Liens', href: '/liens' },
-    { label: 'Qui sommes nous ?', href: '/qui-sommes-nous' }
+    { label: 'Accueil', href: base || '/' },
+    { label: 'Publications', href: (base || '') + '/publications' },
+    { label: 'Index', href: (base || '') + '/index-thematique' },
+    { label: 'Liens', href: (base || '') + '/liens' },
+    { label: 'Qui sommes nous ?', href: (base || '') + '/qui-sommes-nous' }
   ];
 
   function isActive(href) {

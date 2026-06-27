@@ -18,7 +18,9 @@ const config = {
       strict: true
     }),
     prerender: {
-      handleHttpError: 'warn'
+      handleHttpError: 'warn',
+      // Activer le prerendering pour toutes les pages
+      entries: ['*']
     }
   }
 };

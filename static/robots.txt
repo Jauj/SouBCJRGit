@@ -2,4 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://cjr-soub.fr/sitemap.xml
+Sitemap: https://jauj.github.io/SouBCJRGit/sitemap.xml
+
+# Politique de cache
+Cache-Control: public, max-age=86400

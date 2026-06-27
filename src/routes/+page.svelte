@@ -9,8 +9,43 @@
 
 <svelte:head>
   <title>Socialisme ou Barbarie | Cercle de Jeunes Révolutionnaires</title>
-  <meta name="description" content="Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme." />
-  <link rel="canonical" href="https://cjr-soub.fr/" />
+  <meta name="description" content="Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme, pour la construction d'une Organisation Révolutionnaire de la jeunesse, d'une Internationale Révolutionnaire de la Jeunesse" />
+  <meta name="keywords" content="marxisme, trotskysme, front unique, Rosa Luxemburg, Socialisme ou Barbarie, CJR, révolution, marxisme révolutionnaire, lutte des classes, bolchevisme" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jauj.github.io/SouBCJRGit/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jauj.github.io/SouBCJRGit/" />
+  <meta property="og:title" content="Socialisme ou Barbarie | Cercle de Jeunes Révolutionnaires" />
+  <meta property="og:description" content="Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme, pour la construction d'une Organisation Révolutionnaire de la jeunesse, d'une Internationale Révolutionnaire de la Jeunesse" />
+  <meta property="og:image" content="https://jauj.github.io/SouBCJRGit/logo-cjr.jpg" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jauj.github.io/SouBCJRGit/" />
+  <meta name="twitter:title" content="Socialisme ou Barbarie | Cercle de Jeunes Révolutionnaires" />
+  <meta name="twitter:description" content="Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme, pour la construction d'une Organisation Révolutionnaire de la jeunesse, d'une Internationale Révolutionnaire de la Jeunesse" />
+  <meta name="twitter:image" content="https://jauj.github.io/SouBCJRGit/logo-cjr.jpg" />
+  
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Socialisme ou Barbarie",
+    "url": "https://jauj.github.io/SouBCJRGit/",
+    "description": "Bulletin de liaison du Cercle de Jeunes Révolutionnaires combattant pour le socialisme, pour la construction d'une Organisation Révolutionnaire de la jeunesse, d'une Internationale Révolutionnaire de la Jeunesse",
+    "keywords": "marxisme, trotskysme, front unique, Rosa Luxemburg, Socialisme ou Barbarie, CJR, révolution, marxisme révolutionnaire, lutte des classes, bolchevisme",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cercle de Jeunes Révolutionnaires",
+      "url": "https://jauj.github.io/SouBCJRGit/",
+      "logo": "https://jauj.github.io/SouBCJRGit/logo-cjr.jpg",
+      "description": "Organisation marxiste révolutionnaire travaillant à la construction d'une Internationale Révolutionnaire de la Jeunesse"
+    }
+  }
+  </script>
 </svelte:head>
 
 <!-- Section : Derniers numéros PDF -->
@@ -52,12 +87,12 @@
         <div class="card-line"></div>
       </div>
       <h3 class="card-title">
-        <a href="/article/{post.slug}">{post.title}</a>
+        <a href="{base}/article/{post.slug}">{post.title}</a>
       </h3>
       {#if post.indexations && post.indexations.length > 0}
         <div class="card-tags">
           {#each post.indexations as idx}
-            <a href="/publications?tag={encodeURIComponent(idx.terme)}" class="tag">{idx.terme}</a>
+            <a href="{base}/publications?tag={encodeURIComponent(idx.terme)}" class="tag">{idx.terme}</a>
           {/each}
         </div>
       {/if}

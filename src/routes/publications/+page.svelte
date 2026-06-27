@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { loadPosts } from '$lib/posts.js';
+  import { base } from '$app/paths';
 
   const allPosts = loadPosts();
   let recherche = $state('');
@@ -35,8 +36,41 @@
 
 <svelte:head>
   <title>Analyses & Thèses | Socialisme ou Barbarie</title>
-  <meta name="description" content="Découvrez les thèses du CJR sur le trotskysme, le marxisme et le front unique." />
-  <link rel="canonical" href="https://cjr-soub.fr/publications" />
+  <meta name="description" content="Découvrez les thèses du CJR sur le trotskysme, le marxisme et le front unique. Un fonds documentaire de combat pour la jeunesse révolutionnaire." />
+  <meta name="keywords" content="marxisme, trotskysme, front unique, Rosa Luxemburg, Socialisme ou Barbarie, CJR, révolution, analyses, thèses, publications" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jauj.github.io/SouBCJRGit/publications" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jauj.github.io/SouBCJRGit/publications" />
+  <meta property="og:title" content="Analyses & Thèses | Socialisme ou Barbarie" />
+  <meta property="og:description" content="Découvrez les thèses du CJR sur le trotskysme, le marxisme et le front unique. Un fonds documentaire de combat pour la jeunesse révolutionnaire." />
+  <meta property="og:image" content="https://jauj.github.io/SouBCJRGit/logo-cjr.jpg" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jauj.github.io/SouBCJRGit/publications" />
+  <meta name="twitter:title" content="Analyses & Thèses | Socialisme ou Barbarie" />
+  <meta name="twitter:description" content="Découvrez les thèses du CJR sur le trotskysme, le marxisme et le front unique. Un fonds documentaire de combat pour la jeunesse révolutionnaire." />
+  <meta name="twitter:image" content="https://jauj.github.io/SouBCJRGit/logo-cjr.jpg" />
+  
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Analyses & Thèses | Socialisme ou Barbarie",
+    "url": "https://jauj.github.io/SouBCJRGit/publications",
+    "description": "Découvrez les thèses du CJR sur le trotskysme, le marxisme et le front unique. Un fonds documentaire de combat pour la jeunesse révolutionnaire.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cercle de Jeunes Révolutionnaires",
+      "url": "https://jauj.github.io/SouBCJRGit/",
+      "logo": "https://jauj.github.io/SouBCJRGit/logo-cjr.jpg"
+    }
+  }
+  </script>
 </svelte:head>
 
 <div class="section-header" style="margin-bottom: 1rem;">
@@ -67,7 +101,7 @@
 </div>
 
 {#if tagFiltre}
-  <a href="/publications" style="display: inline-flex; align-items: center; gap: 0.25rem; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 2rem; color: black;">
+  <a href="{base}/publications" style="display: inline-flex; align-items: center; gap: 0.25rem; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 2rem; color: black;">
     &times; Effacer le filtre par tag
   </a>
 {/if}
@@ -80,12 +114,12 @@
         <div class="card-line"></div>
       </div>
       <h3 class="card-title">
-        <a href="/article/{post.slug}">{post.title}</a>
+        <a href="{base}/article/{post.slug}">{post.title}</a>
       </h3>
       {#if post.indexations && post.indexations.length > 0}
         <div class="card-tags">
           {#each post.indexations as idx}
-            <a href="/publications?tag={encodeURIComponent(idx.terme)}" class="tag">{idx.terme}</a>
+            <a href="{base}/publications?tag={encodeURIComponent(idx.terme)}" class="tag">{idx.terme}</a>
           {/each}
         </div>
       {/if}
@@ -102,7 +136,7 @@
           Aucun article trouvé pour ce terme d'indexation.
         {/if}
       </p>
-      <a href="/publications" style="display: inline-block; margin-top: 1rem; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--rouge);">
+      <a href="{base}/publications" style="display: inline-block; margin-top: 1rem; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--rouge);">
         Réinitialiser tous les filtres
       </a>
     </div>
